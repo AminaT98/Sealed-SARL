@@ -1,0 +1,913 @@
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#071014;color:#eef4f2;font-family:"DM Sans",sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}.progress{position:fixed;z-index:1000;top:0;left:0;width:0;height:3px;background:#d9b77a}.nav{position:fixed;z-index:50;top:0;left:0;width:100%;display:flex;align-items:center;justify-content:space-between;padding:24px 5vw;transition:.35s}.nav.scrolled{background:rgba(5,15,19,.86);backdrop-filter:blur(18px);padding-block:15px;border-bottom:1px solid rgba(255,255,255,.08)}.brand{display:flex;align-items:center;gap:11px;font-size:11px;line-height:1.05;letter-spacing:2px;font-weight:700}.brand small{font-size:7px;letter-spacing:2.2px;opacity:.65}.brand-mark{display:grid;place-items:center;width:38px;height:38px;border:1px solid rgba(255,255,255,.55);border-radius:50%;font-family:"Playfair Display";font-size:11px;letter-spacing:0}.nav nav{display:flex;align-items:center;gap:28px;font-size:12px;text-transform:uppercase;letter-spacing:1.3px}.nav nav a{opacity:.78;transition:.25s}.nav nav a:hover{opacity:1}.nav .nav-cta{opacity:1;border:1px solid rgba(255,255,255,.4);padding:10px 16px;border-radius:30px}.menu{display:none;background:none;border:0}.section{position:relative;min-height:100vh;padding:120px 7vw}.hero{min-height:100vh;display:flex;align-items:center;overflow:hidden;padding-top:0}.hero-image,.hero-overlay,.journey-bg,.contact-bg{position:absolute;inset:0}.hero-image{background:url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2200&q=90") center/cover}.hero-overlay{background:linear-gradient(90deg,rgba(3,12,16,.88),rgba(3,12,16,.3) 65%,rgba(3,12,16,.15)),linear-gradient(0deg,rgba(3,12,16,.72),transparent 45%)}.hero-content{position:relative;z-index:2;max-width:850px;margin-left:4vw}.eyebrow,.section-label{font-size:10px;letter-spacing:2.8px;text-transform:uppercase}.eyebrow{color:#d9b77a}.hero h1,h2{font-family:"Playfair Display",serif;font-weight:500;line-height:.96;letter-spacing:-2px}.hero h1{font-size:clamp(64px,9vw,130px);margin:18px 0 28px}.hero h1 em,h2 em{font-style:italic;color:#d9b77a}.hero-copy{max-width:470px;font-size:17px;color:#d5dfdd}.hero-actions{display:flex;align-items:center;gap:28px;margin-top:40px}.button{display:inline-flex;align-items:center;justify-content:space-between;gap:35px;border:1px solid transparent;padding:14px 18px;text-transform:uppercase;letter-spacing:1.3px;font-size:10px;cursor:pointer;transition:.3s}.button-light{background:#eef4f2;color:#071014}.button-light:hover{transform:translateY(-3px);background:#d9b77a}.button-dark{background:#071014;color:#eef4f2}.text-link,.dark-link{font-size:11px;text-transform:uppercase;letter-spacing:1.5px}.text-link{border-bottom:1px solid rgba(255,255,255,.4);padding-bottom:4px}.hero-bottom{position:absolute;bottom:28px;left:7vw;right:7vw;display:flex;gap:18px;align-items:center;font-size:9px;letter-spacing:2px;opacity:.7}.line{height:1px;background:rgba(255,255,255,.35);flex:1}.light{background:#eef2ef;color:#102126}.section-label{color:#87938f}.story-grid,.quality-grid,.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:8vw;margin-top:80px}.story h2,.quality h2,.contact h2{font-size:clamp(46px,6vw,82px);margin:12px 0}.story-copy{max-width:550px;font-size:18px;color:#53625e}.story-copy p{margin:0 0 22px}.dark-link{color:#102126;border-bottom:1px solid #102126;padding-bottom:5px}.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:120px;border-top:1px solid #cbd2cf}.stats div{padding:24px 20px 0 0;border-right:1px solid #cbd2cf}.stats div+div{padding-left:25px}.stats strong{display:block;font:500 38px "Playfair Display"}.stats span{font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:#6b7773}.catalogue{background:#09171b}.section-head{display:flex;justify-content:space-between;align-items:end;gap:60px}.section-head h2{font-size:clamp(50px,6vw,88px);margin:12px 0}.section-head>p{max-width:390px;color:#aab7b4;font-size:14px}.filter-row{display:flex;gap:9px;flex-wrap:wrap;margin:45px 0 22px}.filter{color:#b8c4c1;background:transparent;border:1px solid #314147;border-radius:30px;padding:9px 15px;font-size:10px;text-transform:uppercase;letter-spacing:1.4px;cursor:pointer}.filter.active,.filter:hover{background:#eef4f2;color:#071014;border-color:#eef4f2}.fish-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:390px;gap:14px}.fish-card{position:relative;overflow:hidden;min-height:390px;cursor:pointer;transition:opacity .3s,transform .3s}.fish-card.large{grid-column:span 2;grid-row:span 2;min-height:794px}.fish-card.wide{grid-column:span 2}.fish-card.hidden{display:none}.fish-card img{position:absolute;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}.fish-card:hover img{transform:scale(1.06)}.fish-shade{position:absolute;inset:0;background:linear-gradient(0deg,rgba(2,10,13,.9),transparent 60%)}.fish-meta{position:absolute;top:18px;left:18px;right:18px;display:flex;justify-content:space-between;font-size:8px;letter-spacing:1.5px;color:#dce5e2}.fish-title{position:absolute;bottom:18px;left:20px}.fish-title small{font-size:9px;letter-spacing:1px;color:#bdc8c5}.fish-title h3{font:500 31px "Playfair Display";margin:1px 0 8px}.fish-title span{font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:#d9b77a}.catalogue-note{font-size:10px;color:#7e8d89;max-width:760px;margin-top:25px}.journey{overflow:hidden;display:flex;align-items:center;min-height:100vh}.journey-bg{background:url("https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=2200&q=85") center/cover;filter:saturate(.65)}.journey:after,.contact:after{content:"";position:absolute;inset:0;background:rgba(2,11,14,.73)}.journey-content,.contact-inner{position:relative;z-index:2;width:100%}.journey h2{font-size:clamp(55px,7vw,100px);margin:18px 0 60px}.steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.25)}.step{padding:25px 25px 0 0;border-right:1px solid rgba(255,255,255,.2);margin-right:25px}.step span{font-size:10px;color:#d9b77a}.step h3{font:500 28px "Playfair Display";margin:18px 0 5px}.step p{font-size:12px;color:#b7c4c1;max-width:220px}.quality-list{border-top:1px solid #cbd2cf}.quality-list>div{display:grid;grid-template-columns:45px 1fr;gap:15px;padding:24px 0;border-bottom:1px solid #cbd2cf}.quality-list span{font-size:10px;color:#9b6f35}.quality-list h3{margin:0;font:500 24px "Playfair Display"}.quality-list p{margin:5px 0 0;color:#66736f;font-size:13px;max-width:500px}.contact{min-height:100vh;overflow:hidden}.contact-bg{background:url("https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=2200&q=90") center/cover}.contact:after{background:linear-gradient(90deg,rgba(2,11,14,.9),rgba(2,11,14,.68))}.contact-grid{margin-top:55px}.contact-copy{max-width:500px;color:#b8c6c2}.contact-details{display:flex;flex-direction:column;gap:8px;margin-top:35px;font-size:12px;color:#d9b77a}.contact form{display:flex;flex-direction:column;gap:17px;max-width:520px}.contact label{font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:#aab7b4}.contact input,.contact select,.contact textarea{display:block;width:100%;margin-top:7px;padding:13px 0;background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,.3);color:#fff;outline:none;resize:vertical}.contact select option{background:#071014}.contact input:focus,.contact select:focus,.contact textarea:focus{border-bottom-color:#d9b77a}.submit{align-self:flex-start;margin-top:5px}.form-note{font-size:9px;color:#7f8e8b;margin:0}.modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:25px}.modal.open{display:flex}.modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(12px)}.modal-card{position:relative;z-index:2;background:#eef2ef;color:#102126;max-width:600px;width:100%;padding:55px}.modal-card h2{font-size:58px;margin:12px 0}.modal-card p{color:#52615d}.modal-close{position:absolute;right:18px;top:12px;background:none;border:0;font-size:32px;cursor:pointer}.modal-cta{margin-top:20px}footer{display:flex;align-items:center;justify-content:space-between;padding:30px 7vw;background:#050e11;color:#7f8c89;font-size:10px}.footer-brand{color:#eef4f2}.reveal{opacity:0;transform:translateY(25px);transition:1s ease}.reveal.visible{opacity:1;transform:none}@media(max-width:900px){.nav nav{display:none}.menu{display:flex;flex-direction:column;gap:6px}.menu span{display:block;width:25px;height:1px;background:#fff}.nav.mobile nav{display:flex;position:absolute;top:75px;right:5vw;flex-direction:column;align-items:flex-end;background:rgba(5,15,19,.96);padding:20px 25px;border:1px solid rgba(255,255,255,.1)}.story-grid,.quality-grid,.contact-grid{grid-template-columns:1fr;gap:45px}.stats{grid-template-columns:repeat(2,1fr);gap:0;margin-top:70px}.stats div{padding-bottom:22px}.fish-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:330px}.fish-card.large{min-height:673px}.steps{grid-template-columns:repeat(2,1fr);row-gap:25px}.step{padding-bottom:20px}.section{padding-left:6vw;padding-right:6vw}}@media(max-width:600px){.hero h1{font-size:58px}.hero-copy{font-size:15px}.hero-actions{align-items:flex-start;flex-direction:column;gap:20px}.section{padding-top:100px;padding-bottom:80px}.section-head{display:block}.section-head>p{margin-top:20px}.fish-grid{display:block}.fish-card,.fish-card.large,.fish-card.wide{height:390px;min-height:390px;margin-bottom:12px}.stats{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}.contact h2{font-size:56px}.modal-card{padding:40px 28px}.modal-card h2{font-size:44px}footer{flex-direction:column;gap:18px;text-align:center}}
+
+/* ─────────────────────────────────────────
+   MAURITANIAN COAST / LANDSCAPE CHAPTER
+   ───────────────────────────────────────── */
+.landscape{min-height:110vh;overflow:hidden;display:flex;align-items:center;color:#eef4f2}
+.landscape-image{position:absolute;inset:0;background:url("https://commons.wikimedia.org/wiki/Special:FilePath/ISS-57%20Mauritania%20desert%20coast.jpg") center/cover;transform:scale(1.04)}
+.landscape-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,12,16,.92),rgba(3,12,16,.52) 55%,rgba(3,12,16,.25)),linear-gradient(0deg,rgba(3,12,16,.85),transparent 55%)}
+.landscape-inner{position:relative;z-index:2;width:100%}
+.landscape-heading{max-width:680px;margin-top:60px}
+.landscape-heading h2{font-size:clamp(56px,7vw,100px);margin:14px 0 25px}
+.landscape-heading>p:last-child{font-size:16px;color:#c0ccca;max-width:560px}
+.landscape-strip{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:12px;margin-top:70px}
+.landscape-card{height:300px;position:relative;margin:0;overflow:hidden;border:1px solid rgba(255,255,255,.14)}
+.landscape-card:first-child{height:360px;margin-top:-60px}
+.landscape-card img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease;filter:saturate(.82)}
+.landscape-card:hover img{transform:scale(1.07)}
+.landscape-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(2,9,12,.92),transparent 65%)}
+.landscape-card figcaption{position:absolute;z-index:2;bottom:18px;left:18px;right:18px;display:grid;grid-template-columns:35px 1fr;column-gap:10px}
+.landscape-card figcaption span{font-size:9px;color:#d9b77a}
+.landscape-card figcaption b{font:500 25px "Playfair Display";line-height:1.1}
+.landscape-card figcaption small{grid-column:2;font-size:9px;letter-spacing:1.3px;text-transform:uppercase;color:#aab7b4;margin-top:4px}
+
+/* ─────────────────────────────────────────
+   PREMIUM SPECIES MODAL
+   ───────────────────────────────────────── */
+.modal-card{max-width:1050px;padding:0;display:grid;grid-template-columns:48% 52%;overflow:hidden;background:#eef2ef;box-shadow:0 30px 100px rgba(0,0,0,.55);transform:translateY(20px) scale(.97);animation:modalIn .45s cubic-bezier(.2,.75,.2,1) forwards}
+@keyframes modalIn{to{transform:translateY(0) scale(1)}}
+.modal-visual{position:relative;min-height:620px;background:#071014;overflow:hidden}
+.modal-visual img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity .5s,transform 1.2s}
+.modal.open .modal-visual img{opacity:1;transform:scale(1)}
+.modal-visual-glow{position:absolute;inset:0;background:linear-gradient(0deg,rgba(3,12,16,.72),transparent 60%),linear-gradient(90deg,rgba(3,12,16,.15),transparent)}
+.modal-index{position:absolute;top:22px;left:22px;border:1px solid rgba(5, 79, 52, 0.35);border-radius:30%;width:70px;height:70px;display:grid;place-items:center;font-size:9px;letter-spacing:1px;color:#03141b !important;}
+.modal-content{position:relative;padding:62px 58px 50px;display:flex;flex-direction:column;justify-content:center}
+.modal-content .modal-close{top:16px;right:20px;color:#102126}
+.modal-content h2{font-size:clamp(48px,5vw,72px);margin:12px 0 22px}
+.modal-content>p:not(.eyebrow){font-size:15px;line-height:1.85;color:#596763;max-width:470px}
+.modal-specs{display:flex;flex-wrap:wrap;gap:8px;margin:25px 0 12px}
+.modal-specs span{border:1px solid #ccd4d0;border-radius:30px;padding:8px 11px;font-size:8px;text-transform:uppercase;letter-spacing:1px;color:#53605c}
+.modal-cta{align-self:flex-start;margin-top:18px}
+.modal-cta span{font-size:15px}
+.modal.open .modal-card:after{content:"";position:absolute;inset:-2px;pointer-events:none;border:1px solid rgba(217,183,122,.4)}
+
+@media(max-width:900px){
+  .landscape-strip{grid-template-columns:1fr 1fr}
+  .landscape-card:first-child{height:300px;margin-top:0}
+  .landscape-card:last-child{display:none}
+  .modal-card{grid-template-columns:1fr;max-width:620px;max-height:90vh;overflow:auto}
+  .modal-visual{min-height:340px;height:340px}
+  .modal-content{padding:45px 30px 35px}
+}
+@media(max-width:600px){
+  .landscape-strip{display:block}
+  .landscape-card,.landscape-card:first-child{height:280px;margin-bottom:10px}
+  .landscape-card:last-child{display:block}
+  .landscape-heading{margin-top:40px}
+  .landscape-heading h2{font-size:55px}
+  .modal-visual{min-height:280px;height:280px}
+  .modal-content h2{font-size:45px}
+}
+
+
+/* V3 — cinematic scroll-driven hero */
+.hero-scroll{position:relative;height:185vh;background:#071c22}
+.hero-sticky{position:sticky;top:0;height:100vh;overflow:hidden;isolation:isolate}
+.hero-scene{position:absolute;inset:0;background-position:center;background-size:cover;will-change:opacity,transform;transform:scale(1.04)}
+.scene-desert{background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/ISS-57%20Mauritania%20desert%20coast.jpg");opacity:1}
+.scene-coast{background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/Iwik.%20Village%20du%20Banc%20d%27Arguin%20en%20Mauritanie.jpg");opacity:0}
+.scene-ocean{background-image:linear-gradient(180deg,rgba(2,25,31,.1),rgba(2,25,31,.3)),url("https://commons.wikimedia.org/wiki/Special:FilePath/The%20Banc%20d%27Arguin%20National%20Park%2C%20Mauritania.jpg");opacity:0}
+.hero-scroll .hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,19,24,.76),rgba(2,19,24,.26) 58%,rgba(2,19,24,.42)),linear-gradient(0deg,rgba(2,19,24,.65),transparent 42%);z-index:2}
+.hero-marine{position:absolute;inset:0;z-index:3;pointer-events:none;overflow:hidden;opacity:0;transition:opacity .25s ease}
+.hero-fish{position:absolute;width:min(43vw,520px);right:-8%;top:52%;filter:drop-shadow(0 20px 35px rgba(0,0,0,.3));will-change:transform}
+.fish-body{transform-origin:center;}
+.depth-light{position:absolute;inset:-20%;background:repeating-linear-gradient(105deg,transparent 0 11%,rgba(187,235,239,.09) 13% 15%,transparent 18% 28%);transform:translateY(-20%) rotate(-6deg);mix-blend-mode:screen}
+.bubble{position:absolute;border:1px solid rgba(235,250,250,.55);border-radius:50%;width:7px;height:7px;opacity:.5;will-change:transform}
+.bubble-1{left:68%;top:72%}.bubble-2{left:74%;top:79%;width:12px;height:12px}.bubble-3{left:60%;top:64%;width:5px;height:5px}.bubble-4{left:83%;top:65%;width:9px;height:9px}
+.hero-scroll .hero-content{position:absolute;z-index:4;top:50%;left:8vw;transform:translateY(-50%);max-width:760px;color:#fff}
+.hero-scroll .hero-bottom{display:none}
+.hero-scroll-caption{position:absolute;z-index:5;bottom:34px;left:8vw;right:8vw;display:flex;align-items:center;gap:14px;color:rgba(255,255,255,.72);font-size:10px;letter-spacing:.18em}
+.hero-scroll-caption .line{height:1px;flex:1;background:rgba(255,255,255,.28)}
+@media(max-width:700px){
+  .hero-scroll{height:165vh}
+  .hero-fish{width:78vw;right:-24%;top:57%;}
+  .hero-scroll .hero-content{left:7vw;right:7vw}
+  .hero-scroll-caption{left:7vw;right:7vw;font-size:8px}
+}
+
+/* V3 — catalogue and modal polish */
+.fish-card img{background:#dcebed;object-fit:cover}
+.fish-card{cursor:pointer}
+.modal{display:none;position:fixed;inset:0;z-index:1000;align-items:center;justify-content:center;padding:5vh 5vw}
+.modal.open{display:flex}
+.modal-backdrop{position:absolute;inset:0;background:rgba(1,14,18,.82);backdrop-filter:blur(14px)}
+.fish-modal{position:relative;z-index:2;width:min(1050px,94vw);max-height:90vh;overflow-y:auto !important;display:grid;grid-template-columns:1.05fr .95fr;background:#f2f5f3;border-radius:2px;box-shadow:0 30px 100px rgba(0,0,0,.5);animation:modalIn .5s cubic-bezier(.2,.8,.2,1)}
+@keyframes modalIn{from{opacity:0;transform:translateY(30px) scale(.97)}to{opacity:1;transform:none}}
+.modal-close{position:absolute;z-index:4;right:18px;top:18px;width:44px;height:44px;border:1px solid rgba(255,255,255,.45);background:rgba(0,0,0,.25);color:#fff;border-radius:50%;font-size:26px;cursor:pointer}
+.modal-visual{min-height:520px;position:relative;background:#173d46;overflow:hidden}
+.modal-visual img{width:100%;height:100%;min-height:520px;object-fit:cover;display:block}
+.modal-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(2,20,25,.65))}
+.modal-index{position:absolute;z-index:2;left:26px;bottom:22px;color:#fff;font-size:10px;letter-spacing:.2em}
+.modal-body{padding:54px 50px 48px;display:flex;flex-direction:column;justify-content:center}
+.modal-body h2{font-family:"Playfair Display",serif;font-size:clamp(42px,5vw,68px);line-height:.95;margin:8px 0 4px;color:#0b2830}
+.scientific{font-style:italic;color:#60757a;margin:0 0 22px}
+.modal-body>p:not(.eyebrow):not(.scientific){color:#4e6267;line-height:1.75}
+.modal-meta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}
+.modal-meta div{padding:14px;background:#e5ecea;border:1px solid #d2dfdc}
+.modal-meta span,.grades-title{display:block;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#6b7d81;margin-bottom:5px}
+.modal-meta strong{font-size:14px;color:#173a42}
+.grades{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+.grades span{font-size:11px;padding:8px 10px;border:1px solid #bfd0cd;border-radius:99px;color:#254a52;background:#fff}
+.grades-wrap{margin-bottom:26px}
+.modal-cta{align-self:flex-start}
+@media(max-width:780px){
+  .fish-modal{grid-template-columns:1fr;max-height:92vh}
+  .modal-visual,.modal-visual img{min-height:270px;height:270px}
+  .modal-body{padding:32px 25px 30px}
+  .modal-body h2{font-size:44px}
+}
+
+/* V3 — quality logistics */
+.quality{background:#09262e;color:#edf6f5;padding-top:120px;padding-bottom:100px}
+.quality .section-label{color:rgba(255,255,255,.48)}
+.quality-grid{display:grid;grid-template-columns:1fr 1fr;gap:10vw;align-items:start}
+.quality-grid h2{font-family:"Playfair Display",serif;font-size:clamp(46px,6vw,86px);line-height:.94;font-weight:500;margin:12px 0 28px}
+.quality-grid h2 em{color:#8dc6cb;font-style:italic}
+.quality-lead{max-width:560px;color:#a8bec1;line-height:1.8}
+.quality-points{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(255,255,255,.08)}
+.quality-points>div{padding:28px;background:#0d3139;min-height:170px}
+.quality-points span{display:block;color:#78b8be;font-size:10px;letter-spacing:.16em;margin-bottom:28px}
+.quality-points strong{font-family:"Playfair Display",serif;font-size:25px;font-weight:500}
+.quality-points p{font-size:13px;line-height:1.6;color:#91aeb2}
+.logistics-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:70px;background:rgba(255,255,255,.08)}
+.logistics-strip>div{background:#071f26;padding:28px}
+.logistics-strip strong{display:block;color:#79b8be;font-size:10px;letter-spacing:.16em;margin-bottom:12px}
+.logistics-strip span{color:#9db4b8;font-size:13px;line-height:1.6}
+@media(max-width:800px){
+  .quality-grid{grid-template-columns:1fr}
+  .quality-points{grid-template-columns:1fr}
+  .logistics-strip{grid-template-columns:1fr}
+}
+
+
+/* =========================================================
+   V4 — CINEMATIC OCEAN EXPLORATION
+   Inspired by the interaction language of cinematic ocean
+   landing pages: sticky camera, depth, chapter changes,
+   moving marine life, caustics and a restrained UI.
+   ========================================================= */
+
+.ocean-hero{
+  position:relative;
+  height:285vh;
+  background:#03141b;
+}
+.ocean-stage{
+  position:sticky;
+  top:0;
+  height:100vh;
+  overflow:hidden;
+  isolation:isolate;
+  background:#03141b;
+}
+.ocean-layer{
+  position:absolute;
+  inset:-7%;
+  background-position:center;
+  background-size:cover;
+  will-change:transform,opacity,filter;
+}
+.ocean-surface{
+  background-image:url("assets/The_Banc_d\'Arguin_National_Park\,_Mauritania_\(cropped\).jpg");
+  background-position:center 48%;
+  filter:saturate(.8) contrast(1.02);
+}
+.ocean-underwater{
+  background-image:url("assets/pexels-photo-13476997.avif");
+  background-position:center 48%;
+  opacity:0;
+  transform:scale(1.18);
+}
+.ocean-vignette{
+  position:absolute;
+  inset:0;
+  z-index:2;
+  background:
+    radial-gradient(circle at 55% 44%,transparent 0 23%,rgba(1,12,18,.16) 57%,rgba(1,9,14,.82) 100%),
+    linear-gradient(90deg,rgba(1,10,15,.72),rgba(1,10,15,.12) 58%,rgba(1,10,15,.38)),
+    linear-gradient(0deg,rgba(1,10,15,.72),transparent 32%,rgba(1,10,15,.08));
+  pointer-events:none;
+}
+.ocean-grain{
+  position:absolute;
+  inset:-50%;
+  z-index:8;
+  opacity:.045;
+  pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+  animation:grain 1s steps(2) infinite;
+}
+@keyframes grain{0%{transform:translate(0,0)}25%{transform:translate(2%,-1%)}50%{transform:translate(-1%,2%)}75%{transform:translate(1%,1%)}100%{transform:translate(-2%,-1%)}}
+
+.surface-haze{
+  position:absolute;
+  z-index:3;
+  inset:-20%;
+  opacity:0;
+  background:
+    radial-gradient(ellipse at 55% 15%,rgba(204,242,240,.2),transparent 28%),
+    linear-gradient(180deg,rgba(161,222,225,.14),transparent 42%);
+  mix-blend-mode:screen;
+  pointer-events:none;
+}
+.caustics{
+  position:absolute;
+  z-index:4;
+  inset:-20%;
+  opacity:0;
+  pointer-events:none;
+  background:
+    repeating-linear-gradient(108deg,transparent 0 7%,rgba(201,246,243,.08) 8% 10%,transparent 12% 19%);
+  mix-blend-mode:screen;
+  filter:blur(1px);
+}
+.caustics-a{transform:rotate(-7deg) translateY(-4%);animation:causticA 7s ease-in-out infinite alternate}
+.caustics-b{transform:rotate(8deg) translateY(7%);animation:causticB 10s ease-in-out infinite alternate-reverse;opacity:0}
+@keyframes causticA{from{transform:rotate(-7deg) translate(-2%,-4%)}to{transform:rotate(-4deg) translate(3%,4%)}}
+@keyframes causticB{from{transform:rotate(8deg) translate(3%,7%)}to{transform:rotate(4deg) translate(-4%,-2%)}}
+
+.ocean-copy{
+  position:absolute;
+  z-index:10;
+  top:50%;
+  left:8vw;
+  width:min(720px,72vw);
+  transform:translateY(-50%);
+  color:#f2f8f7;
+}
+.ocean-kicker{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:9px;
+  letter-spacing:.2em;
+  color:rgba(240,249,248,.68);
+  text-transform:uppercase;
+}
+.ocean-kicker #oceanCount{
+  color:#d9b77a;
+  font-family:"Playfair Display",serif;
+  font-size:16px;
+}
+.tiny-line{height:1px;width:42px;background:rgba(255,255,255,.35)}
+.ocean-chapter{
+  display:none;
+  max-width:650px;
+  animation:chapterIn .7s cubic-bezier(.2,.8,.2,1);
+}
+.ocean-chapter.is-active{display:block}
+.ocean-chapter h1,.ocean-chapter h2{
+  font-family:"Playfair Display",serif;
+  font-weight:500;
+  letter-spacing:-.045em;
+  line-height:.88;
+  margin:20px 0 28px;
+  font-size:clamp(64px,8.5vw,126px);
+}
+.ocean-chapter h2{font-size:clamp(58px,7.6vw,108px)}
+.ocean-chapter h1 em,.ocean-chapter h2 em{color:#d9b77a}
+.ocean-chapter>p:last-child{
+  max-width:480px;
+  font-size:16px;
+  line-height:1.7;
+  color:rgba(231,241,240,.76);
+}
+@keyframes chapterIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.ocean-actions{
+  display:flex;
+  align-items:center;
+  gap:28px;
+  margin-top:36px;
+}
+.ocean-bottom{
+  position:absolute;
+  z-index:12;
+  left:8vw;
+  right:8vw;
+  bottom:30px;
+  display:flex;
+  align-items:center;
+  gap:15px;
+  color:rgba(235,246,244,.65);
+  font-size:8px;
+  letter-spacing:.2em;
+}
+.scroll-track{
+  height:1px;
+  flex:1;
+  background:rgba(255,255,255,.2);
+  position:relative;
+  overflow:hidden;
+}
+#scrollThumb{
+  display:block;
+  height:100%;
+  width:0%;
+  background:#d9b77a;
+  transition:width .08s linear;
+}
+.depth-readout{
+  position:absolute;
+  z-index:9999;
+  right:8vw;
+  bottom:30px;
+  display:flex;
+  align-items:baseline;
+  gap:7px;
+  color:rgba(235,246,244,.6);
+  font-size:8px;
+  letter-spacing:.17em;
+  visibility: hidden;
+}
+.depth-readout strong{
+  color:#eef7f5;
+  font:500 31px "Playfair Display";
+  letter-spacing:0;
+  margin-top: 25px;
+  visibility: hidden;
+}
+.depth-readout small{
+  font-size:8px;
+}
+
+.marine-life{
+  position:absolute;
+  z-index:7;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+  opacity:0;
+}
+.hero-creature{
+  position:absolute;
+  width:min(67vw,900px);
+  left:56%;
+  top:45%;
+  transform:translate3d(110vw,12vh,0) rotate(-2deg) scale(.7);
+  transform-origin:center;
+  filter:drop-shadow(0 35px 45px rgba(0,0,0,.32));
+  will-change:transform,opacity;
+}
+.hero-fish-shape{transform-origin:450px 210px}
+.school{
+  position:absolute;
+  width:min(70vw,900px);
+  left:25%;
+  top:30%;
+  opacity:.3;
+  transform:translate3d(30vw,5vh,0);
+  filter:blur(1px);
+}
+.mini-fish{
+  fill:#d9efed;
+  opacity:.65;
+}
+.particle{
+  position:absolute;
+  width:2px;height:2px;border-radius:50%;
+  background:rgba(220,248,245,.65);
+  opacity:0;
+}
+.p1{left:72%;top:63%}.p2{left:84%;top:54%;width:3px;height:3px}.p3{left:58%;top:74%}
+.p4{left:67%;top:32%}.p5{left:91%;top:75%}.p6{left:48%;top:59%}
+.bubble{
+  position:absolute;
+  border:1px solid rgba(235,252,250,.52);
+  border-radius:50%;
+  opacity:0;
+}
+.b1{width:6px;height:6px;left:69%;top:69%}
+.b2{width:11px;height:11px;left:76%;top:77%}
+.b3{width:5px;height:5px;left:61%;top:67%}
+.b4{width:8px;height:8px;left:84%;top:61%}
+.b5{width:4px;height:4px;left:73%;top:49%}
+
+@media(max-width:700px){
+  .ocean-hero{height:245vh}
+  .ocean-copy{left:7vw;right:7vw;width:auto;top:46%}
+  .ocean-chapter h1,.ocean-chapter h2{font-size:clamp(53px,14vw,82px)}
+  .ocean-chapter>p:last-child{font-size:14px}
+  .ocean-actions{flex-direction:column;align-items:flex-start;gap:18px}
+  .hero-creature{width:105vw;left:22%;top:55%}
+  .school{width:120vw;left:5%;top:34%}
+  .depth-readout{right:7vw}
+  .ocean-bottom{left:7vw;right:7vw}
+}
+
+/* =========================================================
+   V4 — SPACEMENT + STYLISH PRODUCT CARDS
+   ========================================================= */
+.catalogue{
+  padding-top:130px;
+  padding-bottom:135px;
+}
+.catalogue-head{
+  display:grid;
+  grid-template-columns:minmax(0,1.1fr) minmax(280px,.55fr);
+  gap:7vw;
+  align-items:end;
+  margin-top:26px;
+  margin-bottom:55px;
+}
+.catalogue-head h2{
+  font-size:clamp(56px,7vw,100px);
+  margin:12px 0 0;
+  color:#396d5e;
+}
+.section-intro{
+  max-width:440px;
+  color:#65736f;
+  font-size:14px;
+  line-height:1.8;
+  margin:0 0 8px;
+}
+.filters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:0 0 28px;
+}
+.filter{
+  border-radius:25px;
+  padding:10px 15px;
+  border:1px solid #c7d0cd;
+  color:#2b3632;
+  background:rgba(255,255,255,.45);
+  transition:.25s ease;
+}
+.filter span{
+  margin-left:6px;
+  opacity:.55;
+}
+.filter.active,.filter:hover{
+  background:#102f37;
+  border-color:#102f37;
+  color:#fff;
+}
+.fish-grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  grid-auto-rows:auto;
+  gap:18px;
+}
+.fish-card,
+.fish-card.large,
+.fish-card.wide{
+  grid-column:span 3;
+  grid-row:auto;
+  min-height:0;
+  height:455px;
+  border-radius:3px;
+  background:#cbd9d7;
+  box-shadow:0 10px 35px rgba(9,30,35,.07);
+  transform:translateZ(0);
+  transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s ease,opacity .3s ease;
+}
+.fish-card:nth-child(1),
+.fish-card:nth-child(8){
+  grid-column:span 6;
+  height:590px;
+}
+.fish-card:nth-child(5),
+.fish-card:nth-child(12){
+  grid-column:span 6;
+  height:455px;
+}
+.fish-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 25px 55px rgba(9,30,35,.16);
+}
+.fish-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(4,18,22,.04) 25%,rgba(4,18,22,.82) 100%);
+  z-index:1;
+}
+.fish-card img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform 1s cubic-bezier(.16,.8,.2,1),filter .7s ease;
+}
+.fish-card:hover img{
+  transform:scale(1.08);
+  filter:saturate(1.05) contrast(1.02);
+}
+.fish-title{
+  z-index:2;
+  left:25px;
+  right:25px;
+  bottom:24px;
+}
+.fish-title small{
+  display:block;
+  margin-bottom:7px;
+  color:rgba(255,255,255,.7);
+  letter-spacing:.14em;
+}
+.fish-title h3{
+  font-size:clamp(26px,2.3vw,37px);
+  line-height:1;
+  margin:0 0 12px;
+}
+.fish-title span{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  padding-bottom:5px;
+  border-bottom:1px solid rgba(217,183,122,.6);
+  color:#e4c98f;
+  transition:.25s;
+}
+.fish-title span::after{content:"↗";font-size:13px}
+.fish-card:hover .fish-title span{border-bottom-color:#fff;color:#fff}
+.fish-card.hidden{
+  display:none;
+}
+
+/* Modal is intentionally more editorial in V4. */
+.fish-modal{
+  width:min(1120px,94vw);
+  border-radius:5px;
+  overflow:hidden;
+  grid-template-columns:1.15fr .85fr;
+}
+.modal-visual{
+  min-height:600px;
+}
+.modal-visual img{
+  min-height:600px;
+}
+.modal-body{
+  padding:60px 52px 54px;
+}
+.modal-body h2{
+  font-size:clamp(48px,5vw,72px);
+}
+.modal-cta{
+  margin-top:4px;
+}
+
+
+
+@media(max-width:1000px){
+  .catalogue-head{grid-template-columns:1fr;gap:25px}
+  .fish-grid{grid-template-columns:repeat(2,1fr)}
+  .fish-card,.fish-card.large,.fish-card.wide,
+  .fish-card:nth-child(1),.fish-card:nth-child(8),
+  .fish-card:nth-child(5),.fish-card:nth-child(12){
+    grid-column:span 1;
+    height:430px;
+  }
+  .fish-card:nth-child(1),.fish-card:nth-child(8){height:500px}
+}
+@media(max-width:600px){
+  .catalogue{padding-top:100px;padding-bottom:90px}
+  .catalogue-head{margin-bottom:38px}
+  .fish-grid{display:grid;grid-template-columns:1fr;gap:13px}
+  .fish-card,.fish-card.large,.fish-card.wide,
+  .fish-card:nth-child(1),.fish-card:nth-child(8),
+  .fish-card:nth-child(5),.fish-card:nth-child(12){
+    grid-column:1;
+    height:390px;
+  }
+  .fish-title{left:20px;right:20px;bottom:20px}
+  .fish-title h3{font-size:30px}
+}
+
+
+/* =========================================================
+   V5 — CLEAN EDITORIAL / NON-AI VISUAL SYSTEM
+   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --content-width:1180px;
+  --card-gap:24px;
+}
+
+html{scroll-behavior:smooth}
+
+body,
+body *{
+  font-family:"Manrope",sans-serif !important;
+  font-style:normal !important;
+}
+
+em,i{font-style:normal !important}
+
+/* Header / body separation */
+.nav + .ocean-hero,
+.nav + .hero-scroll{
+  margin-top:36px;
+}
+.ocean-hero{margin-top:36px}
+
+/* ---------- Catalogue ---------- */
+#catalogue{
+  padding-top:125px;
+  padding-bottom:135px;
+}
+
+#catalogue .catalogue-head{
+  width:min(var(--content-width),calc(100% - 64px));
+  margin:0 auto 52px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(300px,.48fr);
+  gap:80px;
+  align-items:end;
+}
+
+#catalogue .filters{
+  width:min(var(--content-width),calc(100% - 64px));
+  margin:0 auto 30px;
+}
+
+#catalogue .fish-grid{
+  width:min(var(--content-width),calc(100% - 64px));
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:var(--card-gap);
+  align-items:stretch;
+}
+
+#catalogue .fish-card,
+#catalogue .fish-card.large,
+#catalogue .fish-card.wide,
+#catalogue .fish-card:nth-child(1),
+#catalogue .fish-card:nth-child(5),
+#catalogue .fish-card:nth-child(8),
+#catalogue .fish-card:nth-child(12){
+  grid-column:span 1 !important;
+  width:100% !important;
+  height:430px !important;
+  min-height:430px !important;
+  position:relative;
+  overflow:hidden;
+  border-radius:8px;
+  background:#dce6e4;
+  box-shadow:0 8px 28px rgba(7,29,35,.08);
+  transition:transform .35s ease,box-shadow .35s ease;
+}
+
+#catalogue .fish-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 42px rgba(7,29,35,.15);
+}
+
+#catalogue .fish-card img{
+  position:absolute !important;
+  inset:0 !important;
+  width:100% !important;
+  height:100% !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  padding:22px !important;
+  background:#dce6e4 !important;
+  transform:none !important;
+}
+
+#catalogue .fish-card:hover img{
+  transform:scale(1.035) !important;
+}
+
+#catalogue .fish-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:linear-gradient(
+    to bottom,
+    rgba(3,20,24,0) 38%,
+    rgba(3,20,24,.72) 100%
+  );
+}
+
+#catalogue .fish-title{
+  position:absolute;
+  z-index:2;
+  left:22px;
+  right:22px;
+  bottom:20px;
+}
+
+#catalogue .fish-title small{
+  font-size:9px;
+  letter-spacing:.12em;
+  margin-bottom:7px;
+  color:rgba(255,255,255,.72);
+}
+
+#catalogue .fish-title h3{
+  margin:0 0 10px;
+  font-family:"Manrope",sans-serif !important;
+  font-size:24px;
+  line-height:1.05;
+  font-weight:700;
+  letter-spacing:-.035em;
+}
+
+#catalogue .fish-title span{
+  font-size:10px;
+  letter-spacing:.02em;
+}
+
+#catalogue .catalogue-head h2{
+  font-family:"Manrope",sans-serif !important;
+  font-weight:700;
+  letter-spacing:-.055em;
+}
+
+#catalogue .catalogue-head h2 em,
+#catalogue .catalogue-head h2 i{
+  color:inherit;
+  font-style:normal;
+}
+
+/* Product detail image: entire image stays inside frame */
+#fishModal .modal-visual{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#dce6e4;
+}
+#fishModal .modal-visual img{
+  width:100% !important;
+  height:100% !important;
+  min-height:600px !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  padding:30px !important;
+  background:#dce6e4 !important;
+}
+#fishModal .modal-visual::after{
+  background:linear-gradient(to bottom,transparent 65%,rgba(3,20,24,.38));
+}
+
+/* ---------- Typography cleanup ---------- */
+.ocean-chapter h1,
+.ocean-chapter h2,
+.quality-grid h2,
+.catalogue-head h2{
+  font-family:"Manrope",sans-serif !important;
+  font-weight:700 !important;
+  font-style:normal !important;
+  letter-spacing:-.055em;
+}
+
+.ocean-chapter h1 em,
+.ocean-chapter h2 em,
+.quality-grid h2 em{
+  font-style:normal !important;
+  color:inherit !important;
+}
+
+/* ---------- Cinematic hero ---------- */
+.ocean-hero{
+  height:320vh;
+  margin-top:36px;
+  background:#04131a;
+}
+.ocean-stage{
+  background:#04131a;
+}
+.ocean-layer{
+  will-change:transform,opacity,filter;
+}
+.ocean-surface{
+  transform:scale(1.015);
+}
+.ocean-underwater{
+  transform:scale(1.035);
+}
+
+.ocean-copy{
+  width:min(690px,72vw);
+}
+.ocean-chapter h1,
+.ocean-chapter h2{
+  font-size:clamp(58px,7.5vw,112px);
+  line-height:.92;
+}
+.ocean-chapter>p:last-child{
+  max-width:500px;
+  font-size:15px;
+  line-height:1.75;
+}
+
+.hero-creature{
+  width:min(54vw,760px);
+  left:50%;
+  top:46%;
+  filter:drop-shadow(0 22px 34px rgba(0,0,0,.28));
+}
+
+/* More subtle moving water, instead of synthetic-looking effects */
+.ocean-stage::after{
+  content:"";
+  position:absolute;
+  inset:-12%;
+  z-index:6;
+  pointer-events:none;
+  opacity:0;
+  background:
+    radial-gradient(ellipse at 44% 12%,rgba(194,239,237,.07),transparent 27%),
+    radial-gradient(ellipse at 66% 48%,rgba(80,177,188,.045),transparent 30%);
+  mix-blend-mode:screen;
+  animation:waterMotion 15s ease-in-out infinite alternate;
+}
+@keyframes waterMotion{
+  from{transform:translate3d(-1%,0,0) scale(1)}
+  to{transform:translate3d(1.5%,-1%,0) scale(1.025)}
+}
+
+@media(max-width:1000px){
+  #catalogue .catalogue-head{
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+  #catalogue .fish-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:20px;
+  }
+  #catalogue .fish-card,
+  #catalogue .fish-card.large,
+  #catalogue .fish-card.wide,
+  #catalogue .fish-card:nth-child(1),
+  #catalogue .fish-card:nth-child(5),
+  #catalogue .fish-card:nth-child(8),
+  #catalogue .fish-card:nth-child(12){
+    height:410px !important;
+    min-height:410px !important;
+  }
+}
+
+@media(max-width:700px){
+  .nav + .ocean-hero,
+  .ocean-hero{
+    margin-top:22px;
+  }
+  #catalogue{
+    padding-top:95px;
+    padding-bottom:95px;
+  }
+  #catalogue .catalogue-head,
+  #catalogue .filters,
+  #catalogue .fish-grid{
+    width:calc(100% - 36px);
+  }
+  #catalogue .fish-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:16px;
+  }
+  #catalogue .fish-card,
+  #catalogue .fish-card.large,
+  #catalogue .fish-card.wide,
+  #catalogue .fish-card:nth-child(1),
+  #catalogue .fish-card:nth-child(5),
+  #catalogue .fish-card:nth-child(8),
+  #catalogue .fish-card:nth-child(12){
+    height:340px !important;
+    min-height:340px !important;
+  }
+  #catalogue .fish-card img{padding:12px !important}
+  #catalogue .fish-title{left:16px;right:16px;bottom:15px}
+  #catalogue .fish-title h3{font-size:18px}
+}
+
+@media(max-width:470px){
+  #catalogue .fish-grid{
+    grid-template-columns:1fr;
+    max-width:390px;
+  }
+  #catalogue .fish-card,
+  #catalogue .fish-card.large,
+  #catalogue .fish-card.wide,
+  #catalogue .fish-card:nth-child(1),
+  #catalogue .fish-card:nth-child(5),
+  #catalogue .fish-card:nth-child(8),
+  #catalogue .fish-card:nth-child(12){
+    height:390px !important;
+    min-height:390px !important;
+  }
+}
+
+#story{
+  background-color: #ece7dd;
+}
+
+.journey-bg {
+  background-image: url(assets/mauritanie-scaled-1024x768.jpg);
+}
+
+.journey-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(165, 203, 242, 0.3) !important;
+  pointer-events: none;
+}
