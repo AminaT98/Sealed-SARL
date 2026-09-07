@@ -911,3 +911,124 @@ em,i{font-style:normal !important}
   background: rgba(165, 203, 242, 0.3) !important;
   pointer-events: none;
 }
+
+
+
+
+/* =========================================
+   MOBILE FISH MODAL FIX
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  #fishModal {
+    padding: 12px;
+    align-items: center;
+  }
+
+  #fishModal .fish-modal {
+    width: 100%;
+    max-width: 430px;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow-y: auto !important;
+    overflow-x: hidden;
+  }
+
+  /* Image area */
+  #fishModal .modal-visual {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 250px;
+    min-height: 250px;
+    position: relative;
+  }
+
+  #fishModal .modal-visual img {
+    width: 100% !important;
+    height: 250px !important;
+    min-height: 250px !important;
+    padding: 18px !important;
+    object-fit: contain !important;
+  }
+
+  /* Species label */
+  #fishModal .modal-index {
+    left: 18px;
+    bottom: 16px;
+    font-size: 9px;
+    letter-spacing: .12em;
+  }
+
+  /* Content */
+  #fishModal .modal-body {
+    flex: 1 1 auto;
+    padding: 26px 22px 24px;
+    display: block;
+  }
+
+  #fishModal .modal-body h2 {
+    font-size: 34px;
+    line-height: 1.05;
+    letter-spacing: -.04em;
+    margin: 7px 0 5px;
+  }
+
+  #fishModal .modal-body > p:not(.eyebrow):not(.scientific) {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  #fishModal .scientific {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+
+  /* Supply / Origin */
+  #fishModal .modal-meta {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin: 16px 0;
+  }
+
+  #fishModal .modal-meta div {
+    padding: 11px 12px;
+  }
+
+  /* Grades */
+  #fishModal .grades-wrap {
+    margin-bottom: 18px;
+  }
+
+  #fishModal .grades {
+    gap: 6px;
+  }
+
+  #fishModal .grades span {
+    font-size: 10px;
+    padding: 7px 9px;
+  }
+
+  /* Request button */
+  #fishModal .modal-cta {
+    width: 100%;
+    justify-content: center;
+    margin-top: 5px;
+  }
+
+  /* Close button */
+  #fishModal .modal-close {
+    width: 38px;
+    height: 38px;
+    right: 12px;
+    top: 12px;
+    font-size: 22px;
+  }
+
+  .modal-index{
+    width:60px;
+    height:60px;
+  }
+}
